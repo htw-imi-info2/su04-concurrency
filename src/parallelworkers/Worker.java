@@ -6,10 +6,6 @@ public class Worker implements Runnable {
 	long delay = 1000;
 	long counter = 0;
 
-	public long getCounter() {
-		return counter;
-	}
-
 	public Worker(int number, int totalNumber, long delay) {
 		this.number = number;
 		this.delay = delay;
@@ -25,7 +21,6 @@ public class Worker implements Runnable {
 		for (int i = 0; i < n; i++) {
 			result += " | ";
 		}
-		// return String.format("%" + n + "s", " ");
 		return result;
 	}
 
@@ -45,5 +40,9 @@ public class Worker implements Runnable {
 
 	public int getNumber() {
 		return number;
+	}
+
+	public long getCounter() {
+		return counter;
 	}
 }
