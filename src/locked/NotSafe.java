@@ -8,10 +8,11 @@ public class NotSafe {
 
 	public void start() throws InterruptedException {
 		long startTime = System.currentTimeMillis();
-		long plus = 8000, minus = 3000;
+		final long plus = 8000, minus = 3000;
+		System.out.println("Starting.....");
 		for (int i = 0; i < 100; i++) {
-			Account account = new Account();
-			//SynchronizedAccount account = new SynchronizedAccount();
+			final Account account = new Account();
+			// final SynchronizedAccount account = new SynchronizedAccount();
 			Thread inc = new Thread(new Runnable() {
 				@Override
 				public void run() {
