@@ -1,9 +1,9 @@
-package parallelworkers.withjoin;
+package no02_parallelworkers.withjoin;
 
-import parallelworkers.Worker;
+import no02_parallelworkers.Worker;
 
-public class WorkerWithThread extends Worker {
-	public WorkerWithThread(int number, int totalNumber, long delay) {
+public class WorkerWithJoin extends Worker {
+	public WorkerWithJoin(int number, int totalNumber, long delay) {
 		super(number, totalNumber, delay);
 	}
 

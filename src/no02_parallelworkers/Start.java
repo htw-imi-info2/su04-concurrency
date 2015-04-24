@@ -1,4 +1,4 @@
-package parallelworkers;
+package no02_parallelworkers;
 
 import java.util.ArrayList;
 import java.util.List;

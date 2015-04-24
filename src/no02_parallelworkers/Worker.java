@@ -1,4 +1,4 @@
-package parallelworkers;
+package no02_parallelworkers;
 
 public class Worker implements Runnable {
 	int number, remainderBars;
@@ -12,6 +12,15 @@ public class Worker implements Runnable {
 		this.remainderBars = totalNumber - number;
 	}
 
+	@Override
+	public void run() {
+		while (shouldRun) {
+			counter++;
+			System.out.println(nSpaces(number - 1) + " " + number + " "
+					+ nSpaces(remainderBars));
+		}
+	}
+
 	public void stop() {
 		shouldRun = false;
 	}
@@ -22,15 +31,6 @@ public class Worker implements Runnable {
 			result += " | ";
 		}
 		return result;
-	}
-
-	@Override
-	public void run() {
-		while (shouldRun) {
-			counter++;
-			System.out.println(nSpaces(number - 1) + " " + number + " "
-					+ nSpaces(remainderBars));
-		}
 	}
 
 	@Override

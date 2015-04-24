@@ -1,7 +1,7 @@
-package parallelworkers.withjoin;
+package no02_parallelworkers.withjoin;
 
-import parallelworkers.Start;
-import parallelworkers.Worker;
+import no02_parallelworkers.Start;
+import no02_parallelworkers.Worker;
 
 public class StartWithJoin extends Start {
 	public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class StartWithJoin extends Start {
 
 	public Worker buildAndStartNewWorker(int number, int numberOfWorkers,
 			int delay) {
-		WorkerWithThread worker = new WorkerWithThread(number, numberOfWorkers,
+		WorkerWithJoin worker = new WorkerWithJoin(number, numberOfWorkers,
 				delay);
 		worker.setThread(new Thread(worker));
 		worker.getThread().start();
