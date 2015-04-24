@@ -1,4 +1,4 @@
-package locked;
+package no04_;
 
 public class Safe {
 	long sum = 0;

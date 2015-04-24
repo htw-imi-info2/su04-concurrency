@@ -1,4 +1,4 @@
-package threadsafety;
+package no04_threadsafety;
 
 public class Safe {
 	long sum = 0;

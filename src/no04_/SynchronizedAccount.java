@@ -1,4 +1,4 @@
-package locked;
+package no04_;
 
 public class SynchronizedAccount {
 	private long amount = 0;

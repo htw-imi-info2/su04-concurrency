@@ -1,4 +1,4 @@
-package no02_parallelworkers;
+package no03_parallelworkers;
 
 public class Worker implements Runnable {
 	int number, remainderBars;

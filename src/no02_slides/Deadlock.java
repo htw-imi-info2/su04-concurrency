@@ -1,4 +1,4 @@
-package slides;
+package no02_slides;
 
 public class Deadlock {
 	Object lock1 = new Object();

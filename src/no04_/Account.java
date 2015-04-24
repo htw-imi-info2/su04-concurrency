@@ -1,4 +1,4 @@
-package locked;
+package no04_;
 
 public class Account {
 	private long amount = 0;
