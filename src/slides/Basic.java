@@ -2,10 +2,6 @@ package slides;
 
 public class Basic {
 
-	public Basic() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public void startThread() throws InterruptedException {
 		Runnable runner = new Runnable() {
 			@Override

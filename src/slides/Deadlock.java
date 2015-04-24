@@ -14,6 +14,7 @@ public class Deadlock {
 			public void run() {
 				try {
 					synchronized (lock1) {
+						Thread.sleep(100);
 						synchronized (lock2) {
 							while (true) {
 								System.out.println("runner 1 running!");
@@ -31,7 +32,7 @@ public class Deadlock {
 			public void run() {
 				try {
 					synchronized (lock2) {
-						Thread.sleep(1000);
+						Thread.sleep(100);
 						synchronized (lock1) {
 							while (true) {
 								System.out.println("runner 2 running!");
@@ -50,8 +51,8 @@ public class Deadlock {
 		runnerThread2.start();
 		Thread.yield();
 		for (int i = 0; i < 10; i++) {
-			System.out.println(runnerThread1.getState());
-			System.out.println(runnerThread2.getState());
+			System.out.println("State 1:"+runnerThread1.getState());
+			System.out.println("State 2:"+runnerThread2.getState());
 			Thread.sleep(1000);			
 		}
 		runnerThread1.interrupt();

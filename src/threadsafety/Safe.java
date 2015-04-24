@@ -2,8 +2,7 @@ package threadsafety;
 
 public class Safe {
 	long sum = 0;
-	Object justAnyObjectToSynchronizeOn = new Object();
-
+	
 	class Incrementor implements Runnable {
 		int n = 0;
 		Object lock;
@@ -40,19 +39,21 @@ public class Safe {
 		}
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		new Safe().start();
 	}
 
-	public void start() {
+	public void start() throws InterruptedException {
 		long startTime = System.currentTimeMillis();
 		for (int i = 0; i < 100; i++) {
 			sum = 0;
-			Object lock = this;
+			Object lock = new Object();;
 			Thread inc = new Thread(new Incrementor(5000, lock));
 			Thread dec = new Thread(new Decrementor(4000, lock));
 			inc.start();
 			dec.start();
+			inc.join();
+			dec.join();
 			System.out.println("sum: " + sum);
 		}
 		long endTime = System.currentTimeMillis();
