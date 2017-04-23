@@ -23,6 +23,8 @@ public class Start {
 		}
 		stopAndPrintStatistics(workers);
 		System.out.println("Main Thread Terminated.");
+		// this is the effective end of the program, note that is will end all 
+		// child threads. To see how to wait for them, look in no03_parallelworkers.withjoin
 	}
 
 	public Worker buildAndStartNewWorker(int number, int numberOfWorkers,

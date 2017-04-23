@@ -1,5 +1,10 @@
-package no04_;
+package no04_account;
 
+/**
+ * Demonstration of using Account unsynchronized.
+ * @author kleinen
+ *
+ */
 public class NotSafe {
 
 	public static void main(String[] args) throws InterruptedException {

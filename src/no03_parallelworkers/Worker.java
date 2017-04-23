@@ -1,5 +1,14 @@
 package no03_parallelworkers;
 
+/**
+ * Worker is one of the several Workers.
+ * It contains some logic for a neat visualization, but it's also 
+ * an example of a class implementing the Runnable interface
+ * as well as using a flag to indicate whether the thread should be running.
+ * s
+ * @author Barne Kleinen
+ *
+ */
 public class Worker implements Runnable {
 	int number, remainderBars;
 	boolean shouldRun = true;
@@ -11,8 +20,7 @@ public class Worker implements Runnable {
 		this.delay = delay;
 		this.remainderBars = totalNumber - number;
 	}
-
-	@Override
+    @Override
 	public void run() {
 		while (shouldRun) {
 			counter++;

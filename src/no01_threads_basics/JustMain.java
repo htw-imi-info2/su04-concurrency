@@ -1,4 +1,4 @@
-package no01_threads;
+package no01_threads_basics;
 /**
  * Examine this with the debugger.
  * @author bkleinen

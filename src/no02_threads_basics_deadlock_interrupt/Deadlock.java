@@ -1,11 +1,14 @@
-package no02_slides;
+package no02_threads_basics_deadlock_interrupt;
 
+/**
+ * Simple example of an Deadlock.
+ */
 public class Deadlock {
 	Object lock1 = new Object();
 	Object lock2 = new Object();
 	
 	public Deadlock() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public void startThread() throws InterruptedException {
