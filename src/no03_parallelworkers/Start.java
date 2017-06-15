@@ -17,7 +17,7 @@ public class Start {
 			workers.add(buildAndStartNewWorker(i + 1, numberOfWorkers, delay));
 		}
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(60*1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
