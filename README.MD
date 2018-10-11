@@ -9,9 +9,10 @@ Java Concurrency Examples
 4. no03_parallelworkers.withjoin: waits for individual threads both Start and Worker.
 5. no04_account: Bank Account example, shows why ++ not being atomic can cause trouble.
 6. no05_threadsafety: Simpler example showing the effect of ++ not atomic.
+7. no06_lambda: little example with lambda
 
 Puzzle (for the bored)
 ------------------------------------
 With the last two examples, you might have noticed if the computation ends up wrong due to the missing
 synchronization, this usually happens during the first couple of runs, and almost not anymore during the
-last runs. Can you find an explanation for this behavior? 
+last runs. Can you find an explanation for this behavior?
