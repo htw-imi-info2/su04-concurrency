@@ -1,9 +1,9 @@
 Java Concurrency Examples
 =================================
 
-1. no01_threads - JustMain - one main thread, examine with debugger and pause thread. Most probably, it will be stopped at while waiting.
+1. no01_threads - JustMain - one main thread, examine with debugger and pause thread. Most probably, it will be stopped at while sleeping.
 2. no02_threads_basics_deadlock_interrupt
-    1. Basic: This is an example of how another thread can be interrupted and catch the Interrupted Exception.
+    1. InterruptedThread: This is an example of how another thread can be interrupted and catch the Interrupted Exception.
     2. Deadlock: Simple example of an Deadlock.
 3. no03_parallelworkers: Start starts several Workers. Visualization of switches between several threads.
 4. no03_parallelworkers.withjoin: waits for individual threads both Start and Worker.

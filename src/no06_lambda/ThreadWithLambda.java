@@ -1,13 +1,15 @@
 package no06_lambda;
 
 public class ThreadWithLambda {
+	static boolean shouldRun = true;
 	public static void main(String args[]) throws InterruptedException {
 		Thread t = new Thread(() -> {
-			while (true)
+			while (shouldRun)
 				System.out.println("running....");
+			System.out.println("Done.");
 		});
 		t.start();
-		Thread.currentThread().sleep(2000);
-		t.stop();
+		Thread.sleep(2000);
+		shouldRun = false;
 	}
 }

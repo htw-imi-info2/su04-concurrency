@@ -11,3 +11,4 @@ public class StartWithWait extends StartWithJoin{
 		new StartWithJoin().doIt(args);
 	}
 }
+
