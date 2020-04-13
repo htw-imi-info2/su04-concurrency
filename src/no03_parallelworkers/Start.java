@@ -1,5 +1,7 @@
 package no03_parallelworkers;
 
+import no03_parallelworkers.withjoin.WorkerWithJoin;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,7 +31,7 @@ public class Start {
 
 	public Worker buildAndStartNewWorker(int number, int numberOfWorkers,
 			int delay) {
-		Worker worker = new Worker(number, numberOfWorkers, delay);
+		Worker worker = new WorkerWithJoin(number, numberOfWorkers, delay);
 		new Thread(worker).start();
 		return worker;
 	}
