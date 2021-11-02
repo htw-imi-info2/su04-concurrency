@@ -1,7 +1,7 @@
 package no03_parallelworkers.withjoin;
 
-import no03_parallelworkers.Start;
-import no03_parallelworkers.Worker;
+import no03_parallelworkers.simple.Start;
+import no03_parallelworkers.simple.Worker;
 
 /**
  * 

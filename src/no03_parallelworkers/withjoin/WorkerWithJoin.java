@@ -1,6 +1,6 @@
 package no03_parallelworkers.withjoin;
 
-import no03_parallelworkers.Worker;
+import no03_parallelworkers.simple.Worker;
 
 public class WorkerWithJoin extends Worker {
 	public WorkerWithJoin(int number, int totalNumber, long delay) {

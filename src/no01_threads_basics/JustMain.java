@@ -1,6 +1,10 @@
 package no01_threads_basics;
 /**
- * Examine this with the debugger.
+ * Examine this with the debugger:
+ * You can pause the current thread
+ * and check where it is at.
+ * (it will most probably the sleep
+ * method in this example).
  * @author bkleinen
  *
  */

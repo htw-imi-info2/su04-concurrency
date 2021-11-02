@@ -1,6 +1,5 @@
-package no03_parallelworkers;
+package no03_parallelworkers.simple;
 
-import no03_parallelworkers.withjoin.WorkerWithJoin;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,13 +24,13 @@ public class Start {
 		}
 		stopAndPrintStatistics(workers);
 		System.out.println("Main Thread Terminated.");
-		// this is the effective end of the program, note that is will end all 
+		// this is the effective end of the program, note that this will end all
 		// child threads. To see how to wait for them, look in no03_parallelworkers.withjoin
 	}
 
 	public Worker buildAndStartNewWorker(int number, int numberOfWorkers,
 			int delay) {
-		Worker worker = new WorkerWithJoin(number, numberOfWorkers, delay);
+		Worker worker = new Worker(number, numberOfWorkers, delay);
 		new Thread(worker).start();
 		return worker;
 	}

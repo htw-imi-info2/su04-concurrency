@@ -1,4 +1,4 @@
-package no03_parallelworkers;
+package no03_parallelworkers.simple;
 
 /**
  * Worker is one of the several Workers.

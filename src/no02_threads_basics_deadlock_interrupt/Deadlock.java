@@ -1,7 +1,8 @@
 package no02_threads_basics_deadlock_interrupt;
 
 /**
- * Simple example of an Deadlock.
+ * Simple example of a Deadlock.
+ *
  */
 public class Deadlock {
 	Object lock1 = new Object();
@@ -11,7 +12,7 @@ public class Deadlock {
 
 	}
 
-	public void startThread() throws InterruptedException {
+	public void startThreads() throws InterruptedException {
 		Runnable runner1 = new Runnable() {
 			@Override
 			public void run() {
@@ -53,25 +54,25 @@ public class Deadlock {
 				}
 			}
 		};
-		Thread runnerThread1 = new Thread(runner1);
-		Thread runnerThread2 = new Thread(runner2);
+		Thread runnerThread1 = new Thread(runner1,"Runner 1");
+		Thread runnerThread2 = new Thread(runner2,"Runner 2");
 		runnerThread1.start();
 		runnerThread2.start();
 		Thread.yield();
 		for (int i = 0; i < 10; i++) {
-			System.out.println("State 1:" + runnerThread1.getState());
-			System.out.println("State 2:" + runnerThread2.getState());
+			System.out.println("State 1: " + runnerThread1.getState());
+			System.out.println("State 2: " + runnerThread2.getState());
 			Thread.sleep(1000);
 		}
-		System.out.println("Stopping Thread 1");
+		//System.out.println("Stopping Thread 1");
 		//runnerThread1.stop();
 		Thread.sleep(2000);
 		//runnerThread1.join();
 		//runnerThread2.join();
-		System.out.println("Done!");
+		System.out.println("Done! - Main Thread will be terminated.");
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-		(new Deadlock()).startThread();
+		(new Deadlock()).startThreads();
 	}
 }
